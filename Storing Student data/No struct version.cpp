@@ -3,14 +3,24 @@
 
 using namespace std;
 
-//setting constant array value
 const int maxStudents =2;
-
-//setting the student values
 string name[maxStudents];
 string gradeLevel[maxStudents];
 int age[maxStudents];
 float gpa[maxStudents];
+
+
+class studentObj
+{
+    public:
+        string name;
+        string gradeLevel;
+        int age;
+        float gpa;
+
+
+};
+studentObj objectRecord[maxStudents];
 
 
 
@@ -18,24 +28,27 @@ int main()
 {
     cout<< "Non-struct version" <<endl;
 
-    //loop through all the different arrays and store the data
     for(int i=0;i<maxStudents;i++)
     {
-        //store student name in  array at position i
+        //store student name in struct array at position i
         cout<< "Enter the name of the student" <<endl;
         cin>> name[i];
+        objectRecord[i].name = name[i];
 
-        //store student age in  array at position i
+        //store student age in struct array at position i
         cout<< "Enter the students age" <<endl;
         cin>> age[i];
+        objectRecord[i].age = age[i];
 
-        //store student gpa in  array at position i
+        //store student gpa in struct array at position i
         cout<< "Enter the students GPA" <<endl;
         cin>> gpa[i];
+        objectRecord[i].gpa = gpa[i];
 
-        //store student grade level in  array at position i
+        //store student grade level in struct array at position i
         cout<< "Enter the students grade level" <<endl;
         cin>> gradeLevel[i];
+        objectRecord[i].gradeLevel = gradeLevel[i];
 
         cout<< "----------------------" <<endl;
     }
@@ -43,7 +56,6 @@ int main()
     cout<<"======================"  <<endl;
     cout<<"======================"  <<endl;
 
-    //outprint the student data
     for(int i=0;i<maxStudents;i++)
     {
 
@@ -55,5 +67,19 @@ int main()
         cout<< "----------------------" <<endl;
 
     }
+
+    cout<< "Object version" << endl;
+    for(int i=0;i<maxStudents;i++)
+    {
+        //Object version
+        cout<<"The student "<< (i+1) <<"'s name is "<< objectRecord[i].name<< endl;
+        cout<<"The student "<< (i+1) <<"'s  age is "<< objectRecord[i].age<< endl;
+        cout<<"The student "<< (i+1) <<"'s  GPA is "<< objectRecord[i].gpa<< endl;
+        cout<<"The student "<< (i+1) <<"'s grade level is "<< objectRecord[i].gradeLevel<< endl;
+
+        cout<< "----------------------" <<endl;
+
+    }
+
     return 0;
 }
