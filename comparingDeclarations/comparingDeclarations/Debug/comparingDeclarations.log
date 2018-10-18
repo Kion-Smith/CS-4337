@@ -1,0 +1,4 @@
+﻿  comparingDeclarations.cpp
+c:\users\neonkion\desktop\visual studio projects (school)\4337 ( org of prog langs)\comparingdeclarations\comparingdeclarations\comparingdeclarations.cpp(55): warning C4101: 'array': unreferenced local variable
+  comparingDeclarations.vcxproj -> C:\Users\NeonKion\Desktop\Visual Studio Projects (School)\4337 ( org of prog langs)\comparingDeclarations\Debug\comparingDeclarations.exe
+  comparingDeclarations.vcxproj -> C:\Users\NeonKion\Desktop\Visual Studio Projects (School)\4337 ( org of prog langs)\comparingDeclarations\Debug\comparingDeclarations.pdb (Full PDB)
