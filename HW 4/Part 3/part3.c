@@ -8,9 +8,9 @@ int main()
         {
             j--;
         }
-        else if(j+2 ==0)
+        else if(j+2 == 0)
         {
-            j++;
+            j+=2;
         }
         else
         {
