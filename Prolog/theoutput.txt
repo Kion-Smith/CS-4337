@@ -1,0 +1,11 @@
+trace.
+{trace}
+| ?- reverse([1,2,3,4],Q).
+      1    1  Call: reverse([1,2,3,4],_50) ? 
+      1    1  Exit: reverse([1,2,3,4],[4,3,2,1]) ? 
+
+Q = [4,3,2,1]
+
+yes
+{trace}
+| ?- 
