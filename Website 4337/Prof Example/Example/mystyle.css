@@ -1,0 +1,32 @@
+/* element selctor */
+h1 {
+    color: red;
+    margin-left: 20px;}
+
+/* id selctor */
+#myid{
+border-style: dotted solid;
+}
+
+/* class selctor */
+.myclass{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
+
+
+/* id selctor */
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+/* id selctor */
+#panel {
+    padding: 50px;
+    display: none;
+}

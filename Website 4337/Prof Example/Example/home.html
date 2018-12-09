@@ -1,0 +1,40 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideDown("slow");
+    });
+});
+</script>
+
+
+</head>
+<body>
+
+<h1 >HTML </h1>
+<p id="myid"> Firstly, HTML is short for "HyperText Markup Language".
+ That may sound scary, but it simply means it is a language for describing web-pages using ordinary text. HTML is not a complex programming language.  </p>
+
+<h3 class="myclass"> CSS </H3>
+<p class="myclass">  Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.
+ CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript. </p>
+
+
+<h1>  JQuery </h1>
+<p>   jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation,
+ event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.The following is an example for JQuery </p> 
+
+
+
+<div id="flip">Click to slide down panel</div>
+<div id="panel">Hello world!</div>
+
+
+</body>
+</html>
+
