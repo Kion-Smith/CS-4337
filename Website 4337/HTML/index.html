@@ -4,6 +4,7 @@
 		<TITLE> Kion Smith </TITLE>
 		<meta name = "viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type = "text/css" href="../CSS/style.css">
+		<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
 		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 
 		
@@ -21,29 +22,158 @@
 			<br>
 			<img src ="../Images/kion.png" alt = "Kion Smith" id="aviPicture" >
 			<h1>Kion Smith</h1>
+			<h3>Computer Science Student at University of Texas at Dallas</h3>
 			<hr>
-			<h3>Some other text</h3>
-			<p>All the requirements for the <b>Project!</b></p>
-
+			
+			
 			<div id = "mainBubble">
 				<ul>
-		 		 	<li> <p> About </p> </li>
-		 		 	<li> <p> Projects </p> </li>
-		  			<li> <p> Contact </p> </li>
+		 		 	<li id = "aboutBubble"> 
+		 		 		<p> About </p>
+		 		 		<img src = "../Images/about.png" alt = "?" id = "aboutIcon" > 
+		 		 	 </li>
+		 		 	<li id = "projectsBubble"> 
+		 		 		<p> Projects </p> 
+		 		 		<img src = "../Images/projects.png" alt = "Computer" id = "projectsIcon"> 
+		 		 	</li>
+		  			<li id = "contactBuble"> 
+		  				<p> Contact </p> 
+		  				<img src = "../Images/mail.png" alt = "mail" id = "contactIcon"> 
+		  			</li>
 				</ul>
 			</div>
 
-			
-			<h6> <i>Follow me!</i></h6>
-			
+			<p><i>Follow me!</i></p>
 			<div id = "socialMedia">
 				<ul>
-					<li><a href="www.twitter.com">Tiwtter</a></li>
-					<li><a href="www.youtube.com">Youtube</a></li>
-					<li><a href="www.github.com">Github</a></li>
-					<li><a href="www.Linkedin.com">Linkedin</a></li>
+					<li><a href="https://www.twitter.com"> <img src = "../Images/twitter.png" alt = "Twitter" class = "socialIcons"> </a></li>
+					<li><a href="https://www.youtube.com"><img src = "../Images/youtube.png" alt = "Youtube" class = "socialIcons"></a></li>
+					<li><a href="https://www.github.com"><img src = "../Images/github.png" alt = "Github" class = "socialIcons"></a></li>
+					<li><a href="https://www.Linkedin.com"><img src = "../Images/linkedin.png" alt = "Linkedin" class = "socialIcons"></a></li>
 				</ul>
 			</div>
+			<h6> *Note : I do not own these backgrounds or the icons </h6>
+		</div>
+
+		<script>
+			$(document).ready(function()
+			{
+				$("#aviPicture").click(function()
+				{
+					var pic = $("#aviPicture");
+					pic.animate({width: '20%'});
+					pic.animate({width: '17%'});
+					pic.animate({width: '20%'});
+					pic.animate({width: '10%'});
+				});
+
+				$("#aboutBubble").click(function()
+				{
+						
+					$(".mainContent").slideUp();
+
+					$(".popupBox").show();
+					$(".aboutContents").show();
+
+					$(".popupBox").click(function()
+					{
+
+						$(".mainContent").slideDown();
+						$(".popupBox").hide();
+						$(".aboutContents").hide();
+					
+					});
+				});
+
+				$("#projectsBubble").click(function()
+				{
+											
+					
+					$(".mainContent").fadeOut( function()
+						{
+							$(".popupBox").fadeIn();
+							$(".projectsContents").show();
+						});
+
+					
+					$(".popupBox").click(function()
+					{
+
+						$(".mainContent").slideDown();
+						$(".popupBox").hide();
+						$(".projectsContents").hide();
+					
+					});
+				});
+
+				$("#contactBuble").click(function()
+				{
+											
+					$(".mainContent").slideUp();
+					$(".popupBox").show();
+					$(".contactContents").show();
+
+					$(".popupBox").click(function()
+					{
+
+						$(".mainContent").slideDown();
+						$(".popupBox").hide();
+						$(".contactContents").hide();
+					
+					});
+
+				});
+
+
+			});		
+		</script>
+
+		<div class = "popupBox" style="display: none">
+			<img src = "../Images/xButton.png" alt = "X button" class ="xButton">
+
+			<div class="aboutContents" style="display: none">
+				<br>
+				<h2> About Me </h2>
+				<hr>
+				<br>
+				<p> I am an aspiring software engineer, who also has <b>interests in all fields of computer science </b>. I am also interested in <b>digital art and animation </b>. </p>
+			</div>
+
+			<div class="projectsContents" style="display: none">
+				<br>
+				<h2> Projects </h2>
+				<hr>
+				<br>
+				<p> My projects are all on my  Github page, however here are the names of notable ones</p>
+				<br>
+				<table style="width:100%">
+				 	<tr>
+						<th>Project Name</th>
+				    	<th>Date Started</th> 
+				    	<th>Dated Finished</th>
+					</tr>
+					<tr>
+				    	<td>Windows Programmer Calculator</td>
+				    	<td>10/14/17</td> 
+				    	<td>12/3/17</td>
+					</tr>
+					<tr>
+				    	<td>To-do Calendar</td>
+				    	<td>8/9/18</td> 
+				    	<td>Still in development</td>
+				  	</tr>
+				</table>
+			</div>
+
+			<div class="contactContents" style="display: none">
+				<br>
+				<h2> Contact</h2>
+				<hr>
+				<br>
+				<p>Email: kion_smith@hotmail.com</p>
+				
+			</div>
+
 		</div>
 		
 		
